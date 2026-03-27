@@ -1,13 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { createAdminClient } from '@/lib/supabase';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
   try {
+    const supabase = createAdminClient();
+    
+    if (!supabase) {
+      return NextResponse.json(
+        { error: 'Supabase client not available' },
+        { status: 500 }
+      );
+    }
+
     const { drawId } = await req.json();
 
     // Get all user scores
@@ -34,7 +40,7 @@ export async function POST(req: NextRequest) {
     const results: any[] = [];
 
     // Check each user's scores against draw numbers
-    const uniqueUsers = [...new Set(allScores.map(s => s.user_id))];
+    const uniqueUsers = [...new Set(allScores.map((s: { user_id: string }) => s.user_id))];
 
     for (const userId of uniqueUsers) {
       const userScores = allScores
@@ -43,7 +49,7 @@ export async function POST(req: NextRequest) {
         .map((s: any) => s.score);
 
       // Calculate matches
-      const matches = userScores.filter(score => drawnNumbers.includes(score));
+      const matches = userScores.filter((score: number) => drawnNumbers.includes(score));
       const matchCount = matches.length;
 
       if (matchCount >= 3) {
