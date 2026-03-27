@@ -118,7 +118,7 @@ export default function PaymentConfirmationModal({
             </button>
           </div>
           <p className="text-xs text-white/40 mt-2">
-            Save this code for your records. You can view your transaction history in the dashboard.
+            Save this code for your records. A receipt has been sent to your email.
           </p>
         </motion.div>
 
