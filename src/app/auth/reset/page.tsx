@@ -37,7 +37,7 @@ export default function ResetPasswordPage() {
 
   if (success) {
     return (
-      <AuthLayout title="Check Your Email" subtitle="We&apos;ve sent you a password reset link.">
+      <AuthLayout title="Reset Requested" subtitle="Password reset has been initiated.">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -48,10 +48,10 @@ export default function ResetPasswordPage() {
           </div>
 
           <div className="space-y-2">
-            <h3 className="text-2xl font-black text-white">Email Sent!</h3>
+            <h3 className="text-2xl font-black text-white">Reset Initiated</h3>
             <p className="text-white/60 font-medium leading-relaxed">
-              We&apos;ve sent a password reset link to <span className="text-primary font-bold">{email}</span>.
-              Check your inbox and click the link to reset your password.
+              A password reset request has been processed for <span className="text-primary font-bold">{email}</span>.
+              Please follow the instructions provided by your administrator.
             </p>
           </div>
 

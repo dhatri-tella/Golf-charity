@@ -66,18 +66,8 @@ const Footer: React.FC = () => {
 
           {/* Newsletter */}
           <div className="space-y-6">
-            <h4 className="text-chalk font-bold text-xs uppercase tracking-widest border-l-2 border-leaf pl-3">The Green Sheet</h4>
-            <p className="text-ash text-xs font-sans">Get the latest draw results and charity impact reports twice a month.</p>
-            <div className="flex border border-leaf/40 bg-pine p-1">
-              <input 
-                type="email" 
-                placeholder="EMAIL ADDRESS" 
-                className="bg-transparent border-none text-chalk placeholder:text-ash/40 text-[10px] font-bold tracking-widest outline-none px-3 flex-grow"
-              />
-              <button className="bg-leaf p-2 text-chalk hover:bg-turf transition-colors">
-                <Mail size={16} />
-              </button>
-            </div>
+            <h4 className="text-chalk font-bold text-xs uppercase tracking-widest border-l-2 border-leaf pl-3">Stay Connected</h4>
+            <p className="text-ash text-xs font-sans">For updates and news, follow us on our social media platforms as we continue to drive impact together.</p>
           </div>
         </div>
 
