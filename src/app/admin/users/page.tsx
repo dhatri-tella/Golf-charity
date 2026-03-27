@@ -34,10 +34,6 @@ const AdminUserManagementPage = () => {
   const [editingScores, setEditingScores] = useState<any[]>([]);
   const supabase = createClientComponentClient();
 
-  useEffect(() => {
-    fetchUsers();
-  }, [supabase]);
-
   const fetchUsers = async () => {
     const { data: results, error } = await supabase
       .from('users')
@@ -46,6 +42,10 @@ const AdminUserManagementPage = () => {
     if (!error && results) setUsers(results);
     setLoading(false);
   };
+
+  useEffect(() => {
+    fetchUsers();
+  }, [supabase]);
 
   const handleEditUser = (user: any) => {
     setSelectedUser(user);

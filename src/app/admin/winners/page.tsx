@@ -37,10 +37,6 @@ const AdminWinnerVerificationPage = () => {
   const [selectedWin, setSelectedWin] = useState<any>(null);
   const supabase = createClientComponentClient();
 
-  useEffect(() => {
-    fetchWinners();
-  }, [supabase]);
-
   const fetchWinners = async () => {
     const { data, error } = await supabase
       .from('draw_results')
@@ -50,6 +46,10 @@ const AdminWinnerVerificationPage = () => {
     if (!error && data) setWinners(data);
     setLoading(false);
   };
+
+  useEffect(() => {
+    fetchWinners();
+  }, [supabase]);
 
   const handleStatusChange = async (id: string, status: 'approved' | 'rejected') => {
     setProcessing(id);

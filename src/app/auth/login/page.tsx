@@ -156,7 +156,7 @@ export default function LoginPage() {
         </button>
 
         <p className="text-center text-white/40 text-sm font-medium">
-          Don't have an account? <Link href="/auth/signup" className="text-primary font-black hover:underline tracking-tight">Subscribe Now</Link>
+          Don&apos;t have an account? <Link href="/auth/signup" className="text-primary font-black hover:underline tracking-tight">Subscribe Now</Link>
         </p>
       </form>
     </AuthLayout>

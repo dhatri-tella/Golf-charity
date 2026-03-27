@@ -44,15 +44,15 @@ const AdminDrawManagementPage = () => {
   });
   const supabase = createClientComponentClient();
 
-  useEffect(() => {
-    fetchDraws();
-  }, [supabase]);
-
   const fetchDraws = async () => {
     const { data, error } = await supabase.from('draws').select('*').order('created_at', { ascending: false });
     if (!error && data) setDraws(data);
     setLoading(false);
   };
+
+  useEffect(() => {
+    fetchDraws();
+  }, [supabase]);
 
   const handleSimulate = async () => {
     setSimulating(true);

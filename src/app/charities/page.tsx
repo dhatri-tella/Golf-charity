@@ -30,10 +30,6 @@ const CharitiesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const supabase = createClientComponentClient();
 
-  useEffect(() => {
-    fetchCharities();
-  }, [supabase]);
-
   const fetchCharities = async () => {
     if (!supabase) {
       console.warn('Supabase not configured. Using mock data.');
@@ -57,6 +53,10 @@ const CharitiesPage = () => {
     }
     setLoading(false);
   };
+
+  useEffect(() => {
+    fetchCharities();
+  }, [supabase]);
 
   const filtered = charities.filter(charity => {
     const matchesSearch = charity.name.toLowerCase().includes(search.toLowerCase()) ||

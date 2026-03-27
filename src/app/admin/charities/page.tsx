@@ -44,15 +44,15 @@ const AdminCharityManagementPage = () => {
   });
   const supabase = createClientComponentClient();
 
-  useEffect(() => {
-    fetchCharities();
-  }, [supabase]);
-
   const fetchCharities = async () => {
     const { data, error } = await supabase.from('charities').select('*').order('created_at', { ascending: false });
     if (!error && data) setCharities(data);
     setLoading(false);
   };
+
+  useEffect(() => {
+    fetchCharities();
+  }, [supabase]);
 
   const handleAddCharity = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -82,7 +82,7 @@ const AdminCharityManagementPage = () => {
          <div className="space-y-4">
             <h1 className="text-4xl font-black text-white">Cause <span className="text-gold">Matrix</span></h1>
             <p className="text-white/40 max-w-lg font-medium leading-relaxed">
-               Govern the platform's social impact by managing charitable partnerships and tracking real-time contribution flow.
+               Govern the platform&apos;s social impact by managing charitable partnerships and tracking real-time contribution flow.
             </p>
          </div>
 
@@ -133,7 +133,7 @@ const AdminCharityManagementPage = () => {
                            <div className="flex items-center justify-between">
                               <div className="space-y-1">
                                  <span className="text-[10px] font-black uppercase tracking-widest text-white/20 block">Impact Reach</span>
-                                 <span className="text-sm font-black text-primary">£{(Math.random() * 45000).toFixed(2)}</span>
+                                 <span className="text-sm font-black text-primary">£{((c.id.charCodeAt(0) * 1234) % 45000).toFixed(2)}</span>
                               </div>
                               <div className="flex items-center space-x-2">
                                  <button onClick={() => handleToggleFeatured(c.id, c.is_featured || false)} className={cn(
