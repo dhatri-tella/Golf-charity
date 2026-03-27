@@ -1,0 +1,677 @@
+
+> golf-charity@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+- Environments: .env.local, .env
+- Cache Components enabled
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 27 errors:
+./next.config.ts
+Failed to resolve package babel-plugin-react-compiler while attempting to resolve React Compiler
+React compiler is enabled in next.config.ts. We attempted to resolve React Compiler relative to the next package. Is babel-plugin-react-compiler installed in your node_modules directory?
+
+
+./src/components/layout/Footer.tsx:3:1
+Export Facebook doesn't exist in target module
+  1 | import React from 'react';
+  2 | import Link from 'next/link';
+> 3 | import { Twitter, Instagram, Facebook, Youtube, Mail } from 'lucide-react';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const Footer: React.FC = () => {
+  6 |   const currentYear = new Date().getFullYear();
+
+The export Facebook was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Webhook?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/Footer.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/Footer.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Server Component]
+
+
+./src/components/layout/Footer.tsx:3:1
+Export Facebook doesn't exist in target module
+  1 | import React from 'react';
+  2 | import Link from 'next/link';
+> 3 | import { Twitter, Instagram, Facebook, Youtube, Mail } from 'lucide-react';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const Footer: React.FC = () => {
+  6 |   const currentYear = new Date().getFullYear();
+
+The export Facebook was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Webhook?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/Footer.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/Footer.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Server Component]
+
+
+./src/components/layout/Footer.tsx:3:1
+Export Instagram doesn't exist in target module
+  1 | import React from 'react';
+  2 | import Link from 'next/link';
+> 3 | import { Twitter, Instagram, Facebook, Youtube, Mail } from 'lucide-react';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const Footer: React.FC = () => {
+  6 |   const currentYear = new Date().getFullYear();
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/Footer.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/Footer.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Server Component]
+
+
+./src/components/layout/Footer.tsx:3:1
+Export Instagram doesn't exist in target module
+  1 | import React from 'react';
+  2 | import Link from 'next/link';
+> 3 | import { Twitter, Instagram, Facebook, Youtube, Mail } from 'lucide-react';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const Footer: React.FC = () => {
+  6 |   const currentYear = new Date().getFullYear();
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/Footer.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/Footer.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Server Component]
+
+
+./src/components/layout/Footer.tsx:3:1
+Export Twitter doesn't exist in target module
+  1 | import React from 'react';
+  2 | import Link from 'next/link';
+> 3 | import { Twitter, Instagram, Facebook, Youtube, Mail } from 'lucide-react';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const Footer: React.FC = () => {
+  6 |   const currentYear = new Date().getFullYear();
+
+The export Twitter was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Timer?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/Footer.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/Footer.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Server Component]
+
+
+./src/components/layout/Footer.tsx:3:1
+Export Twitter doesn't exist in target module
+  1 | import React from 'react';
+  2 | import Link from 'next/link';
+> 3 | import { Twitter, Instagram, Facebook, Youtube, Mail } from 'lucide-react';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const Footer: React.FC = () => {
+  6 |   const currentYear = new Date().getFullYear();
+
+The export Twitter was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Timer?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/Footer.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/Footer.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Server Component]
+
+
+./src/components/layout/Footer.tsx:3:1
+Export Youtube doesn't exist in target module
+  1 | import React from 'react';
+  2 | import Link from 'next/link';
+> 3 | import { Twitter, Instagram, Facebook, Youtube, Mail } from 'lucide-react';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const Footer: React.FC = () => {
+  6 |   const currentYear = new Date().getFullYear();
+
+The export Youtube was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Route?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/Footer.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/Footer.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Server Component]
+
+
+./src/components/layout/Footer.tsx:3:1
+Export Youtube doesn't exist in target module
+  1 | import React from 'react';
+  2 | import Link from 'next/link';
+> 3 | import { Twitter, Instagram, Facebook, Youtube, Mail } from 'lucide-react';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const Footer: React.FC = () => {
+  6 |   const currentYear = new Date().getFullYear();
+
+The export Youtube was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Route?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/layout/Footer.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Client Component Browser]
+    ./src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/layout/Footer.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Client Component SSR]
+    ./src/app/home/page.tsx [Server Component]
+
+
+./src/app/admin/draws/page.tsx:30:1
+Export formatCurrency doesn't exist in target module
+  28 |   Search
+  29 | } from 'lucide-react';
+> 30 | import { cn, generateDrawNumbers, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  31 | import { createClientComponentClient } from '@/lib/supabase';
+  32 |
+  33 | const AdminDrawManagementPage = () => {
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-client] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/draws/page.tsx [Client Component Browser]
+    ./src/app/admin/draws/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/draws/page.tsx [Client Component SSR]
+    ./src/app/admin/draws/page.tsx [Server Component]
+
+
+./src/app/admin/draws/page.tsx:30:1
+Export formatCurrency doesn't exist in target module
+  28 |   Search
+  29 | } from 'lucide-react';
+> 30 | import { cn, generateDrawNumbers, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  31 | import { createClientComponentClient } from '@/lib/supabase';
+  32 |
+  33 | const AdminDrawManagementPage = () => {
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-ssr] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/draws/page.tsx [Client Component Browser]
+    ./src/app/admin/draws/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/draws/page.tsx [Client Component SSR]
+    ./src/app/admin/draws/page.tsx [Server Component]
+
+
+./src/app/admin/page.tsx:21:1
+Export formatCurrency doesn't exist in target module
+  19 |   TrendingDown
+  20 | } from 'lucide-react';
+> 21 | import { cn, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  22 | import { createClientComponentClient } from '@/lib/supabase';
+  23 |
+  24 | const AdminAnalyticsPage = () => {
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-client] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/page.tsx [Client Component Browser]
+    ./src/app/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/page.tsx [Client Component SSR]
+    ./src/app/admin/page.tsx [Server Component]
+
+
+./src/app/admin/page.tsx:21:1
+Export formatCurrency doesn't exist in target module
+  19 |   TrendingDown
+  20 | } from 'lucide-react';
+> 21 | import { cn, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  22 | import { createClientComponentClient } from '@/lib/supabase';
+  23 |
+  24 | const AdminAnalyticsPage = () => {
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-ssr] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/page.tsx [Client Component Browser]
+    ./src/app/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/page.tsx [Client Component SSR]
+    ./src/app/admin/page.tsx [Server Component]
+
+
+./src/app/admin/winners/page.tsx:30:1
+Export formatCurrency doesn't exist in target module
+  28 |   Calendar
+  29 | } from 'lucide-react';
+> 30 | import { cn, formatCurrency, formatDate } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  31 | import { createClientComponentClient } from '@/lib/supabase';
+  32 |
+  33 | const AdminWinnerVerificationPage = () => {
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-client] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/winners/page.tsx [Client Component Browser]
+    ./src/app/admin/winners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/winners/page.tsx [Client Component SSR]
+    ./src/app/admin/winners/page.tsx [Server Component]
+
+
+./src/app/admin/winners/page.tsx:30:1
+Export formatCurrency doesn't exist in target module
+  28 |   Calendar
+  29 | } from 'lucide-react';
+> 30 | import { cn, formatCurrency, formatDate } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  31 | import { createClientComponentClient } from '@/lib/supabase';
+  32 |
+  33 | const AdminWinnerVerificationPage = () => {
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-ssr] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/winners/page.tsx [Client Component Browser]
+    ./src/app/admin/winners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/winners/page.tsx [Client Component SSR]
+    ./src/app/admin/winners/page.tsx [Server Component]
+
+
+./src/app/charities/page.tsx:19:1
+Export formatCurrency doesn't exist in target module
+  17 |   Zap
+  18 | } from 'lucide-react';
+> 19 | import { cn, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  20 | import { createClientComponentClient } from '@/lib/supabase';
+  21 | import { Charity } from '@/types';
+  22 | import Link from 'next/link';
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-client] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/charities/page.tsx [Client Component Browser]
+    ./src/app/charities/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/charities/page.tsx [Client Component SSR]
+    ./src/app/charities/page.tsx [Server Component]
+
+
+./src/app/charities/page.tsx:19:1
+Export formatCurrency doesn't exist in target module
+  17 |   Zap
+  18 | } from 'lucide-react';
+> 19 | import { cn, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  20 | import { createClientComponentClient } from '@/lib/supabase';
+  21 | import { Charity } from '@/types';
+  22 | import Link from 'next/link';
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-ssr] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/charities/page.tsx [Client Component Browser]
+    ./src/app/charities/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/charities/page.tsx [Client Component SSR]
+    ./src/app/charities/page.tsx [Server Component]
+
+
+./src/app/dashboard/charity/page.tsx:22:1
+Export formatCurrency doesn't exist in target module
+  20 |   Star
+  21 | } from 'lucide-react';
+> 22 | import { cn, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  23 | import { createClientComponentClient } from '@/lib/supabase';
+  24 | import { Charity, Subscription } from '@/types';
+  25 | import Link from 'next/link';
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-client] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/charity/page.tsx [Client Component Browser]
+    ./src/app/dashboard/charity/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/charity/page.tsx [Client Component SSR]
+    ./src/app/dashboard/charity/page.tsx [Server Component]
+
+
+./src/app/dashboard/charity/page.tsx:22:1
+Export formatCurrency doesn't exist in target module
+  20 |   Star
+  21 | } from 'lucide-react';
+> 22 | import { cn, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  23 | import { createClientComponentClient } from '@/lib/supabase';
+  24 | import { Charity, Subscription } from '@/types';
+  25 | import Link from 'next/link';
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-ssr] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/charity/page.tsx [Client Component Browser]
+    ./src/app/dashboard/charity/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/charity/page.tsx [Client Component SSR]
+    ./src/app/dashboard/charity/page.tsx [Server Component]
+
+
+./src/app/dashboard/page.tsx:18:1
+Export formatCurrency doesn't exist in target module
+  16 |   Award
+  17 | } from 'lucide-react';
+> 18 | import { cn, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  19 | import { createClientComponentClient } from '@/lib/supabase';
+  20 |
+  21 | const OverviewPage = () => {
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-client] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/page.tsx [Client Component Browser]
+    ./src/app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/page.tsx [Client Component SSR]
+    ./src/app/dashboard/page.tsx [Server Component]
+
+
+./src/app/dashboard/page.tsx:18:1
+Export formatCurrency doesn't exist in target module
+  16 |   Award
+  17 | } from 'lucide-react';
+> 18 | import { cn, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  19 | import { createClientComponentClient } from '@/lib/supabase';
+  20 |
+  21 | const OverviewPage = () => {
+
+The export formatCurrency was not found in module [project]/src/lib/utils.ts [app-ssr] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/page.tsx [Client Component Browser]
+    ./src/app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/page.tsx [Client Component SSR]
+    ./src/app/dashboard/page.tsx [Server Component]
+
+
+./src/app/admin/users/page.tsx:25:1
+Export formatDate doesn't exist in target module
+  23 |   PlusCircle
+  24 | } from 'lucide-react';
+> 25 | import { cn, formatDate } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  26 | import { createClientComponentClient } from '@/lib/supabase';
+  27 |
+  28 | const AdminUserManagementPage = () => {
+
+The export formatDate was not found in module [project]/src/lib/utils.ts [app-client] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/users/page.tsx [Client Component Browser]
+    ./src/app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/users/page.tsx [Client Component SSR]
+    ./src/app/admin/users/page.tsx [Server Component]
+
+
+./src/app/admin/users/page.tsx:25:1
+Export formatDate doesn't exist in target module
+  23 |   PlusCircle
+  24 | } from 'lucide-react';
+> 25 | import { cn, formatDate } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  26 | import { createClientComponentClient } from '@/lib/supabase';
+  27 |
+  28 | const AdminUserManagementPage = () => {
+
+The export formatDate was not found in module [project]/src/lib/utils.ts [app-ssr] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/users/page.tsx [Client Component Browser]
+    ./src/app/admin/users/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/users/page.tsx [Client Component SSR]
+    ./src/app/admin/users/page.tsx [Server Component]
+
+
+./src/app/dashboard/scores/page.tsx:20:1
+Export formatDate doesn't exist in target module
+  18 |   Activity
+  19 | } from 'lucide-react';
+> 20 | import { cn, formatDate } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  21 | import { createClientComponentClient } from '@/lib/supabase';
+  22 | import { Score } from '@/types';
+  23 |
+
+The export formatDate was not found in module [project]/src/lib/utils.ts [app-client] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/scores/page.tsx [Client Component Browser]
+    ./src/app/dashboard/scores/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/scores/page.tsx [Client Component SSR]
+    ./src/app/dashboard/scores/page.tsx [Server Component]
+
+
+./src/app/dashboard/scores/page.tsx:20:1
+Export formatDate doesn't exist in target module
+  18 |   Activity
+  19 | } from 'lucide-react';
+> 20 | import { cn, formatDate } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  21 | import { createClientComponentClient } from '@/lib/supabase';
+  22 | import { Score } from '@/types';
+  23 |
+
+The export formatDate was not found in module [project]/src/lib/utils.ts [app-ssr] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/dashboard/scores/page.tsx [Client Component Browser]
+    ./src/app/dashboard/scores/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/dashboard/scores/page.tsx [Client Component SSR]
+    ./src/app/dashboard/scores/page.tsx [Server Component]
+
+
+./src/app/admin/draws/page.tsx:30:1
+Export generateDrawNumbers doesn't exist in target module
+  28 |   Search
+  29 | } from 'lucide-react';
+> 30 | import { cn, generateDrawNumbers, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  31 | import { createClientComponentClient } from '@/lib/supabase';
+  32 |
+  33 | const AdminDrawManagementPage = () => {
+
+The export generateDrawNumbers was not found in module [project]/src/lib/utils.ts [app-client] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/draws/page.tsx [Client Component Browser]
+    ./src/app/admin/draws/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/draws/page.tsx [Client Component SSR]
+    ./src/app/admin/draws/page.tsx [Server Component]
+
+
+./src/app/admin/draws/page.tsx:30:1
+Export generateDrawNumbers doesn't exist in target module
+  28 |   Search
+  29 | } from 'lucide-react';
+> 30 | import { cn, generateDrawNumbers, formatCurrency } from '@/lib/utils';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  31 | import { createClientComponentClient } from '@/lib/supabase';
+  32 |
+  33 | const AdminDrawManagementPage = () => {
+
+The export generateDrawNumbers was not found in module [project]/src/lib/utils.ts [app-ssr] (ecmascript).
+Did you mean to import cn?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/draws/page.tsx [Client Component Browser]
+    ./src/app/admin/draws/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/draws/page.tsx [Client Component SSR]
+    ./src/app/admin/draws/page.tsx [Server Component]
+
+
+    at <unknown> (./src/components/layout/Footer.tsx:3:1)
+    ... collapsed 7 duplicate lines matching above 1 lines 7 times...
+    at <unknown> (./src/app/admin/draws/page.tsx:30:1)
+    at <unknown> (./src/app/admin/draws/page.tsx:30:1)
+    at <unknown> (./src/app/admin/page.tsx:21:1)
+    at <unknown> (./src/app/admin/page.tsx:21:1)
+    at <unknown> (./src/app/admin/winners/page.tsx:30:1)
+    at <unknown> (./src/app/admin/winners/page.tsx:30:1)
+    at <unknown> (./src/app/charities/page.tsx:19:1)
+    at <unknown> (./src/app/charities/page.tsx:19:1)
+    at <unknown> (./src/app/dashboard/charity/page.tsx:22:1)
+    at <unknown> (./src/app/dashboard/charity/page.tsx:22:1)
+    at <unknown> (./src/app/dashboard/page.tsx:18:1)
+    at <unknown> (./src/app/dashboard/page.tsx:18:1)
+    at <unknown> (./src/app/admin/users/page.tsx:25:1)
+    at <unknown> (./src/app/admin/users/page.tsx:25:1)
+    at <unknown> (./src/app/dashboard/scores/page.tsx:20:1)
+    at <unknown> (./src/app/dashboard/scores/page.tsx:20:1)
+    at <unknown> (./src/app/admin/draws/page.tsx:30:1)
+    at <unknown> (./src/app/admin/draws/page.tsx:30:1)

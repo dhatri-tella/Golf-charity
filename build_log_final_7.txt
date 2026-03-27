@@ -1,0 +1,24 @@
+
+> golf-charity@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+- Environments: .env.local, .env
+- Cache Components enabled
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 13.2s
+  Running TypeScript ...
+Failed to type check.
+
+./src/context/AuthContext.tsx:3:17
+Type error: Module '"../types"' has no exported member 'AuthContextType'.
+
+  1 | import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+  2 | import { authApi } from '../lib/api';
+> 3 | import { IUser, AuthContextType } from '../types';
+    |                 ^
+  4 |
+  5 | const AuthContext = createContext<AuthContextType | undefined>(undefined);
+  6 |
+Next.js build worker exited with code: 1 and signal: null

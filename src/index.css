@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 11, 31, 20; /* rgb form of #0B1F14 */
+    --foreground: 242, 237, 228; /* rgb form of #F2EDE4 */
+  }
+
+  body {
+    @apply bg-forest text-chalk antialiased selection:bg-signal selection:text-white;
+    cursor: none;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    @apply tracking-tighter uppercase;
+  }
+}
+
+@layer utilities {
+  .gold-shimmer {
+    background: linear-gradient(90deg, #7A5C20, #E8C97A, #C9A84C, #E8C97A, #7A5C20);
+    background-size: 600px auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 5s linear infinite;
+  }
+
+  .glass-panel {
+    @apply bg-pine/80 backdrop-blur-md border border-leaf/30;
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-forest;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-leaf rounded-full hover:bg-turf transition-colors;
+}
+
+/* Base animations attached to utilities */
+.animate-float { @apply animate-[floatY_4s_ease-in-out_infinite]; }
+.animate-pulse-red { @apply animate-[pulseRed_2.5s_ease-in-out_infinite]; }
+.animate-heartbeat { @apply animate-[heartbeat_2s_ease-in-out_infinite]; }
+.animate-slide-up { @apply animate-[slideUp_0.9s_initial_both]; }
+
+[data-animate="true"] {
+  @apply animate-slide-up;
+}

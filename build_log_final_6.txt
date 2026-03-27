@@ -1,0 +1,24 @@
+
+> golf-charity@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+- Environments: .env.local, .env
+- Cache Components enabled
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 14.3s
+  Running TypeScript ...
+Failed to type check.
+
+./src/components/home/Hero.tsx:33:28
+Type error: Parameter 'e' implicitly has an 'any' type.
+
+  31 |   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ['-8deg', '8deg']);
+  32 |
+> 33 |   const handleMouseMove = (e) => {
+     |                            ^
+  34 |     const rect = e.currentTarget.getBoundingClientRect();
+  35 |     const mouseX = e.clientX - rect.left;
+  36 |     const mouseY = e.clientY - rect.top;
+Next.js build worker exited with code: 1 and signal: null

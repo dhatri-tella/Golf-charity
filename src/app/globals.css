@@ -1,0 +1,845 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark Neon/Red Emotional Theme */
+  --color-primary: #ff2d70; /* Hot Pink/Red */
+  --color-secondary: #f59e0b; /* Orange/Gold */
+  --color-accent: #ff487f; /* Light Pink */
+  --color-navy-dark: #0a0f1e;
+  --color-navy: #1a1a2e;
+  --color-navy-light: #2a2a4e;
+}
+
+@layer base {
+  :root {
+    --background: #0a0f1e;
+    --foreground: #ffffff;
+  }
+
+  * {
+    cursor: none !important;
+  }
+
+  body {
+    /* Dark emotional background with neon accents */
+    background: radial-gradient(circle at 20% 20%, #ff0044 0%, #78002a 40%, #0a0f1e 100%);
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    cursor: none;
+  }
+
+  /* Interactive Cursor */
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ff2d70, #ff487f);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease;
+  }
+
+  .cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: #f59e0b;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+
+  .cursor-hover .cursor {
+    transform: scale(2);
+    background: radial-gradient(circle, #f59e0b, #ff2d70);
+  }
+
+  .cursor-click .cursor {
+    transform: scale(0.8);
+    background: #ffffff;
+  }
+
+  /* Hover effects for interactive elements */
+  a, button, [role="button"], input, textarea, select {
+    cursor: none;
+  }
+
+  a:hover, button:hover, [role="button"]:hover {
+    cursor: none;
+  }
+
+  /* Dark theme with animated neon orbs */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(255, 45, 112, 0.15) 0px, transparent 200px),
+      radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.12) 0px, transparent 180px),
+      radial-gradient(circle at 50% 50%, rgba(255, 72, 127, 0.1) 0px, transparent 250px),
+      radial-gradient(circle at 30% 60%, rgba(255, 45, 112, 0.08) 0px, transparent 220px),
+      radial-gradient(circle at 70% 30%, rgba(245, 158, 11, 0.06) 0px, transparent 200px);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    pointer-events: none;
+    animation: neon-pulse 20s ease-in-out infinite;
+  }
+
+  @keyframes neon-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  /* Premium Animation Keyframes */
+  @keyframes float-smooth {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+
+  @keyframes slide-in-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slide-in-down {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fade-in-scale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes rotate-smooth {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+  }
+
+  @keyframes glow-text {
+    0%, 100% { text-shadow: 0 0 20px rgba(255, 45, 112, 0.4); }
+    50% { text-shadow: 0 0 40px rgba(255, 45, 112, 0.8); }
+  }
+
+  @keyframes pulse-scale {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+  }
+}
+
+@layer base {
+  /* Ensure content appears above background pattern */
+  main, nav, footer {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@layer utilities {
+  /* ===== PREMIUM SOFT AESTHETICS ===== */
+  
+  /* Luxurious glass card with soft shadows */
+  .glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(144, 200, 144, 0.3);
+    border-radius: 2.5rem;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 
+      0 8px 32px rgba(157, 132, 183, 0.1),
+      0 20px 60px rgba(144, 200, 144, 0.08);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(144, 200, 144, 0.5);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 
+      0 15px 40px rgba(157, 132, 183, 0.15),
+      0 30px 80px rgba(144, 200, 144, 0.12);
+    transform: translateY(-8px);
+  }
+
+  /* Premium contrast sections */
+  .bg-contrast-light {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(144, 200, 144, 0.25);
+    box-shadow: 0 8px 24px rgba(144, 200, 144, 0.08);
+  }
+
+  .bg-contrast-medium {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(157, 132, 183, 0.2);
+    box-shadow: 0 12px 32px rgba(157, 132, 183, 0.1);
+  }
+
+  .bg-contrast-dark {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(157, 132, 183, 0.25);
+    box-shadow: 0 15px 40px rgba(157, 132, 183, 0.12);
+  }
+
+  /* Accent sections with premium styling */
+  .bg-accent-primary {
+    background: linear-gradient(135deg, rgba(157, 132, 183, 0.12), rgba(157, 132, 183, 0.06));
+    border: 1px solid rgba(157, 132, 183, 0.3);
+    box-shadow: 0 4px 16px rgba(157, 132, 183, 0.1);
+  }
+
+  .bg-accent-secondary {
+    background: linear-gradient(135deg, rgba(212, 149, 116, 0.12), rgba(212, 149, 116, 0.06));
+    border: 1px solid rgba(212, 149, 116, 0.3);
+    box-shadow: 0 4px 16px rgba(212, 149, 116, 0.1);
+  }
+
+  .bg-accent-tertiary {
+    background: linear-gradient(135deg, rgba(144, 200, 144, 0.12), rgba(144, 200, 144, 0.06));
+    border: 1px solid rgba(144, 200, 144, 0.3);
+    box-shadow: 0 4px 16px rgba(144, 200, 144, 0.1);
+  }
+
+  /* Soft Green Pop - Premium styling */
+  .bg-green-pop {
+    background: linear-gradient(135deg, rgba(144, 200, 144, 0.15), rgba(144, 200, 144, 0.08));
+    border: 1px solid rgba(144, 200, 144, 0.4);
+    box-shadow: 0 8px 24px rgba(144, 200, 144, 0.15);
+  }
+
+  .text-green-pop {
+    color: #7FBF7F;
+    text-shadow: 0 2px 8px rgba(144, 200, 144, 0.3);
+  }
+
+  /* ===== PREMIUM TYPOGRAPHY ===== */
+  
+  .gradient-text-animated {
+    background: linear-gradient(300deg, #8B5CF6, #F43F5E, #38BDF8, #8B5CF6);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift-soft 8s ease infinite, glow-text 4s ease-in-out infinite;
+  }
+
+  @keyframes gradient-shift-soft {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Premium text glow */
+  .text-glow-primary {
+    text-shadow: 0 0 20px rgba(157, 132, 183, 0.4);
+  }
+
+  /* ===== PREMIUM GOLF-THEMED VISUALS ===== */
+  
+  /* Golf fairway card background - Soft & Luxurious */
+  .golf-fairway {
+    background: linear-gradient(135deg, 
+      rgba(144, 200, 144, 0.12) 0%, 
+      rgba(255, 255, 255, 0.5) 50%, 
+      rgba(144, 200, 144, 0.1) 100%);
+    border: 1px solid rgba(144, 200, 144, 0.3);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(144, 200, 144, 0.1);
+  }
+
+  .golf-fairway::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(144, 200, 144, 0.04) 30px, rgba(144, 200, 144, 0.04) 60px);
+    pointer-events: none;
+  }
+
+  /* Premium Golf ball accent icon */
+  .golf-ball {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2) 40%, rgba(248, 249, 248, 0.45));
+    box-shadow: 
+      inset -1px -1px 2px rgba(0, 0, 0, 0.08),
+      0 3px 8px rgba(16, 185, 129, 0.2),
+      0 0 0 1px rgba(16, 185, 129, 0.12);
+    position: relative;
+    mix-blend-mode: screen;
+  }
+
+  /* Premium golf club line accent */
+  .golf-club-line {
+    position: relative;
+    padding-left: 16px;
+  }
+
+  .golf-club-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 4px;
+    height: 60%;
+    background: linear-gradient(to right, #90c890, rgba(144, 200, 144, 0.5));
+    transform: translateY(-50%) skewX(-20deg);
+    box-shadow: 0 2px 8px rgba(144, 200, 144, 0.3);
+  }
+
+  /* Premium Scorecard-style gradient */
+  .golf-scorecard {
+    background: linear-gradient(135deg, 
+      rgba(144, 200, 144, 0.1) 0%, 
+      rgba(157, 132, 183, 0.06) 50%, 
+      rgba(144, 200, 144, 0.1) 100%);
+    border: 2px solid rgba(144, 200, 144, 0.3);
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(144, 200, 144, 0.1);
+  }
+
+  .golf-scorecard::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: 10px;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 49px,
+      rgba(144, 200, 144, 0.08) 49px,
+      rgba(144, 200, 144, 0.08) 50px
+    );
+    pointer-events: none;
+  }
+
+  /* Premium Flag pin accent */
+  .golf-flag-accent {
+    position: relative;
+    padding-top: 20px;
+  }
+
+  .golf-flag-accent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d4949e;
+    box-shadow: 0 0 12px rgba(212, 148, 158, 0.5);
+  }
+
+  .golf-flag-accent::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 10px;
+    background: rgba(144, 200, 144, 0.5);
+  }
+
+  .glass-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(244, 63, 94, 0.02) 100%);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 2.5rem;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    background: rgba(139, 92, 246, 0.1);
+    box-shadow: 0 40px 80px -20px rgba(139, 92, 246, 0.3);
+    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+  }
+
+  /* Animated Text Gradient */
+  .gradient-text-animated {
+    background: linear-gradient(300deg, #8B5CF6, #F43F5E, #38BDF8, #8B5CF6);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Neon Glow Effects */
+  .text-glow-primary {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+  }
+
+  .glow-border {
+    position: relative;
+  }
+
+  .glow-border::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #8B5CF6, #F43F5E);
+    border-radius: inherit;
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .glow-border:hover::after {
+    opacity: 1;
+  }
+
+  /* Float Animation */
+  .float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* ===== PREMIUM GOLF & CHARITY BADGES ===== */
+
+  /* Charity Donation Badge */
+  .charity-badge {
+    background: linear-gradient(135deg, rgba(212, 149, 158, 0.2), rgba(144, 200, 144, 0.15));
+    border: 2px solid rgba(212, 149, 158, 0.4);
+    border-radius: 50px;
+    padding: 12px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(212, 149, 158, 0.2);
+    transition: all 0.4s ease;
+  }
+
+  .charity-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(212, 149, 158, 0.3);
+    border-color: rgba(212, 149, 158, 0.6);
+  }
+
+  .charity-badge::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #d4949e;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(212, 149, 158, 0.8);
+  }
+
+  /* Impact Counter Badge */
+  .impact-badge {
+    background: linear-gradient(135deg, rgba(144, 200, 144, 0.2), rgba(212, 165, 116, 0.15));
+    border: 2px solid rgba(144, 200, 144, 0.4);
+    border-radius: 16px;
+    padding: 16px 24px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(144, 200, 144, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .impact-badge::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1), transparent 70%);
+    animation: shine 3s infinite;
+  }
+
+  @keyframes shine {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+  }
+
+  /* Trophy Achievement Style */
+  .trophy-card {
+    background: linear-gradient(135deg, 
+      rgba(212, 165, 116, 0.15) 0%,
+      rgba(212, 149, 158, 0.1) 50%,
+      rgba(212, 165, 116, 0.12) 100%);
+    border: 2px solid rgba(212, 165, 116, 0.3);
+    border-radius: 20px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 
+      0 12px 32px rgba(212, 165, 116, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .trophy-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.4), transparent);
+  }
+
+  /* Leaderboard Premium Style */
+  .leaderboard-rank {
+    background: linear-gradient(135deg, rgba(157, 132, 183, 0.1), rgba(144, 200, 144, 0.08));
+    border: 1px solid rgba(157, 132, 183, 0.25);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(157, 132, 183, 0.08);
+  }
+
+  .leaderboard-rank:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(157, 132, 183, 0.15);
+    border-color: rgba(157, 132, 183, 0.4);
+  }
+
+  .leaderboard-rank.top-1 {
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.15), rgba(212, 165, 116, 0.1));
+    border-color: rgba(212, 165, 116, 0.4);
+  }
+
+  .leaderboard-rank.top-2 {
+    background: linear-gradient(135deg, rgba(192, 192, 192, 0.1), rgba(212, 149, 158, 0.08));
+    border-color: rgba(192, 192, 192, 0.3);
+  }
+
+  .leaderboard-rank.top-3 {
+    background: linear-gradient(135deg, rgba(205, 127, 50, 0.1), rgba(212, 165, 116, 0.08));
+    border-color: rgba(205, 127, 50, 0.3);
+  }
+
+  /* Golf Score Premium Display */
+  .golf-score-display {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.4) 100%);
+    border: 2px solid rgba(144, 200, 144, 0.3);
+    border-radius: 24px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 
+      0 20px 48px rgba(144, 200, 144, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .golf-score-display::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(144, 200, 144, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Score Number Premium Style */
+  .score-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #90c890, #9d84b7, #90c890);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 12px rgba(144, 200, 144, 0.2);
+  }
+
+  /* Charity Impact Heart */
+  .charity-heart {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .charity-heart::before {
+    content: '♥';
+    font-size: 24px;
+    color: #d4949e;
+    text-shadow: 
+      0 0 12px rgba(212, 148, 158, 0.6),
+      0 2px 8px rgba(212, 148, 158, 0.3);
+    animation: pulse-heart 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-heart {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+  }
+
+  /* Premium Statistics Card */
+  .stat-card-premium {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    border: 1px solid rgba(144, 200, 144, 0.3);
+    border-radius: 20px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 
+      0 10px 30px rgba(144, 200, 144, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .stat-card-premium:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+      0 20px 48px rgba(144, 200, 144, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    border-color: rgba(144, 200, 144, 0.5);
+  }
+
+  .stat-card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+      transparent,
+      rgba(144, 200, 144, 0.3),
+      rgba(157, 132, 183, 0.3),
+      transparent);
+  }
+
+  /* Golf Club Icon Badge */
+  .golf-club-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(144, 200, 144, 0.2), rgba(212, 165, 116, 0.15));
+    border: 1px solid rgba(144, 200, 144, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(144, 200, 144, 0.1);
+    position: relative;
+  }
+
+  .golf-club-badge::before {
+    content: '';
+    width: 24px;
+    height: 3px;
+    background: linear-gradient(to right, #90c890, rgba(144, 200, 144, 0.5));
+    transform: rotate(-45deg);
+    box-shadow: 0 2px 6px rgba(144, 200, 144, 0.3);
+  }
+
+  /* Green Pin Achievement */
+  .pin-achievement {
+    position: relative;
+    width: 32px;
+    height: 40px;
+    background: linear-gradient(135deg, #d4949e, #d48080);
+    border-radius: 50% 50% 0 0;
+    box-shadow: 
+      0 4px 12px rgba(212, 148, 158, 0.4),
+      inset -1px -1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .pin-achievement::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 12px;
+    background: #90c890;
+  }
+
+  /* Animated Prize Ribbon */
+  .prize-ribbon {
+    background: linear-gradient(90deg, 
+      rgba(212, 165, 116, 0.2),
+      rgba(212, 165, 116, 0.1),
+      rgba(212, 165, 116, 0.2));
+    border-top: 2px solid rgba(212, 165, 116, 0.4);
+    border-bottom: 2px solid rgba(212, 165, 116, 0.4);
+    padding: 12px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .prize-ribbon::before,
+  .prize-ribbon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 40%, rgba(212, 165, 116, 0.3) 50%, transparent 60%);
+    top: 0;
+  }
+
+  .prize-ribbon::before { left: -10px; }
+  .prize-ribbon::after { right: -10px; }
+}
+
+/* ===== DYNAMIC BACKGROUND STYLES ===== */
+
+  /* Animated Gradient Background */
+  .bg-animated-gradient {
+    background: linear-gradient(-45deg, #8B5CF6, #F43F5E, #38BDF8, #020617);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Radial Gradient Mesh */
+  .bg-gradient-mesh {
+    background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(244, 63, 94, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+    background-color: #020617;
+  }
+
+  /* Animated Mesh with Movement */
+  .bg-gradient-mesh-animated {
+    position: relative;
+    background-color: #020617;
+    overflow: hidden;
+  }
+
+  .bg-gradient-mesh-animated::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(244, 63, 94, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 50%);
+    animation: mesh-shift 20s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes mesh-shift {
+    0%, 100% {
+      background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(244, 63, 94, 0.2) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 50%);
+    }
+    50% {
+      background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+                  radial-gradient(circle at 20% 80%, rgba(244, 63, 94, 0.2) 0%, transparent 50%),
+                  radial-gradient(circle at 60% 60%, rgba(56, 189, 248, 0.15) 0%, transparent 50%);
+    }
+  }
+
+  /* Plasma-like Background */
+  .bg-plasma {
+    background: 
+      radial-gradient(ellipse at 30% 30%, rgba(139, 92, 246, 0.3) 0%, transparent 40%),
+      radial-gradient(ellipse at 70% 70%, rgba(244, 63, 94, 0.3) 0%, transparent 40%),
+      radial-gradient(ellipse at 50% 50%, rgba(56, 189, 248, 0.2) 0%, transparent 50%),
+      #020617;
+    animation: plasma-pulse 8s ease-in-out infinite;
+  }
+
+  @keyframes plasma-pulse {
+    0%, 100% { 
+      background: 
+        radial-gradient(ellipse at 30% 30%, rgba(139, 92, 246, 0.3) 0%, transparent 40%),
+        radial-gradient(ellipse at 70% 70%, rgba(244, 63, 94, 0.3) 0%, transparent 40%),
+        radial-gradient(ellipse at 50% 50%, rgba(56, 189, 248, 0.2) 0%, transparent 50%);
+    }
+    50% { 
+      background: 
+        radial-gradient(ellipse at 70% 40%, rgba(139, 92, 246, 0.4) 0%, transparent 40%),
+        radial-gradient(ellipse at 30% 60%, rgba(244, 63, 94, 0.4) 0%, transparent 40%),
+        radial-gradient(ellipse at 60% 40%, rgba(56, 189, 248, 0.25) 0%, transparent 50%);
+    }
+  }
+
+  /* Aurora-inspired Background */
+  .bg-aurora {
+    background: linear-gradient(to bottom,
+      rgba(139, 92, 246, 0.1) 0%,
+      rgba(244, 63, 94, 0.05) 25%,
+      rgba(56, 189, 248, 0.1) 50%,
+      rgba(139, 92, 246, 0.05) 75%,
+      #020617 100%
+    );
+    animation: aurora-wave 12s ease-in-out infinite;
+  }
+
+  @keyframes aurora-wave {
+    0%, 100% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+  }
+
+.gradient-orb {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: -1;
+  opacity: 0.2;
+  pointer-events: none;
+  animation: orbit 20s linear infinite;
+}
+
+@keyframes orbit {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.orb-primary {
+  background: radial-gradient(circle, #8B5CF6 0%, transparent 70%);
+}
+
+.orb-secondary {
+  background: radial-gradient(circle, #F43F5E 0%, transparent 70%);
+}
+
+/* Luxury Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #8B5CF6, #F43F5E);
+  border-radius: 20px;
+  border: 3px solid #020617;
+}

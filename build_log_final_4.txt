@@ -1,0 +1,24 @@
+
+> golf-charity@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+- Environments: .env.local, .env
+- Cache Components enabled
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 14.2s
+  Running TypeScript ...
+Failed to type check.
+
+./src/app/api/draws/simulate/route.ts:51:42
+Type error: Conversion of type 'number' to type '"3" | "4" | "5"' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+
+  49 |       if (matchCount >= 3) {
+  50 |         let prizeAmount = 0;
+> 51 |         let matchType: '3' | '4' | '5' = matchCount as '3' | '4' | '5';
+     |                                          ^
+  52 |
+  53 |         if (matchCount === 5) prizeAmount = 15750; // 40% of pool
+  54 |         else if (matchCount === 4) prizeAmount = 13781.25; // 35% of pool
+Next.js build worker exited with code: 1 and signal: null

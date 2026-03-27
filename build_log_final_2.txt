@@ -1,0 +1,23 @@
+
+> golf-charity@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+- Environments: .env.local, .env
+- Cache Components enabled
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 17.2s
+  Running TypeScript ...
+Failed to type check.
+
+./src/App.tsx:2:56
+Type error: Cannot find module 'react-router-dom' or its corresponding type declarations.
+
+  1 | import React, { Suspense, lazy } from 'react';
+> 2 | import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+    |                                                        ^
+  3 | import { AuthProvider, useAuth } from './context/AuthContext';
+  4 | import Nav from './components/layout/Nav';
+  5 | import Footer from './components/layout/Footer';
+Next.js build worker exited with code: 1 and signal: null

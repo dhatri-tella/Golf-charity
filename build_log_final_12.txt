@@ -1,0 +1,24 @@
+
+> golf-charity@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+- Environments: .env.local, .env
+- Cache Components enabled
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 15.5s
+  Running TypeScript ...
+Failed to type check.
+
+./src/app/home/page.tsx:18:9
+Type error: 'searchParams' is possibly 'null'.
+
+  16 |   
+  17 |   useEffect(() => {
+> 18 |     if (searchParams.get('session_id')) {
+     |         ^
+  19 |       confetti({
+  20 |         particleCount: 150,
+  21 |         spread: 70,
+Next.js build worker exited with code: 1 and signal: null

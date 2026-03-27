@@ -1,0 +1,38 @@
+
+> golf-charity@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+- Environments: .env.local, .env
+- Cache Components enabled
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 14.8s
+  Running TypeScript ...
+  Finished TypeScript in 9.0s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/32) ...
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+  Generating static pages using 15 workers (8/32) 
+Error: Route "/admin/draws" used `new Date()` inside a Client Component without a Suspense boundary above it. See more info here: https://nextjs.org/docs/messages/next-prerender-current-time-client
+    at <unknown> (src\app\admin\draws\page.tsx:41:12)
+  39 |   const [simResults, setSimResults] = useState<any | null>(null);
+  40 |   const [config, setConfig] = useState({
+> 41 |     month: new Date().getMonth() + 1,
+     |            ^
+  42 |     year: new Date().getFullYear(),
+  43 |     logic: 'random' as 'random' | 'algorithmic'
+  44 |   });
+To get a more detailed stack trace and pinpoint the issue, try one of the following:
+  - Start the app in development mode by running `next dev`, then open "/admin/draws" in your browser to investigate the error.
+  - Rerun the production build with `next build --debug-prerender` to generate better stack traces.
+Error occurred prerendering page "/admin/draws". Read more: https://nextjs.org/docs/messages/prerender-error
+Export encountered an error on /admin/draws/page: /admin/draws, exiting the build.
+Γ¿» Next.js build worker exited with code: 1 and signal: null
