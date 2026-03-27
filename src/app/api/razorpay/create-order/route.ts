@@ -3,12 +3,13 @@ import { createServerClient, type CookieOptions } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import Razorpay from 'razorpay';
 
-const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID!,
-  key_secret: process.env.RAZORPAY_KEY_SECRET!,
-});
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
+  const razorpay = new Razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID!,
+    key_secret: process.env.RAZORPAY_KEY_SECRET!,
+  });
   try {
     const body = await req.json();
     const { amount, currency = 'INR', receipt, charityId, plan } = body;

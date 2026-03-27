@@ -1,0 +1,29 @@
+
+> golf-charity@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 11.0s
+  Running TypeScript ...
+  Finished TypeScript in 6.8s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/24) ...
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+  Generating static pages using 15 workers (6/24) 
+Error occurred prerendering page "/auth/update-password". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of null (reading 'auth')
+    at <unknown> (C:\Users\Chant\OneDrive\Desktop\CHARITY project\.next\server\chunks\ssr\_0thmrzo._.js:1:5255) {
+  digest: '95866089'
+}
+Export encountered an error on /auth/update-password/page: /auth/update-password, exiting the build.
+Γ¿» Next.js build worker exited with code: 1 and signal: null
